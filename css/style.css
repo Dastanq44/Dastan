@@ -325,7 +325,7 @@ footer .barcode { height: 22px; width: 160px; opacity: .5;
   clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
 }
 .item.is-front .cover { border-color: var(--accent); box-shadow: 0 14px 30px rgba(0,0,0,.25); }
-.item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; z-index: 1; }
+.item img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
 .item img.is-broken { display: none; }
 .item .ph {           /* shown only if the cover can't load */
   position: absolute; inset: 0; display: grid; place-items: center; padding: 14px; text-align: center;
@@ -398,3 +398,9 @@ footer .barcode { height: 22px; width: 160px; opacity: .5;
 .taste .item { opacity: clamp(0, calc((var(--d, 1) - .45) * 3.2), 1); }
 .taste .item.is-front { opacity: 1; }
 @media (max-width: 640px) { .taste .item:not(.is-front) .name { visibility: hidden; } }
+
+/* games use full Steam library covers (2:3 portrait) */
+.games .stand-box { --card: 150px; --r: 380px; }
+.games .item .cover { aspect-ratio: 2 / 3; }
+.games .stand { height: calc(var(--card) * 1.5 + 150px); }
+@media (max-width: 640px) { .games .stand-box { --card: 92px; --r: 175px; } }

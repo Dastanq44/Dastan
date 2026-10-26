@@ -35,6 +35,12 @@ def save_square(raw, path, focus_y=0.5):
     im.save(path, quality=84, optimize=True, progressive=True)
 
 
+def save_portrait(raw, path):
+    """Steam library capsule, kept uncropped at 2:3."""
+    im = Image.open(io.BytesIO(raw)).convert("RGB").resize((600, 900), Image.LANCZOS)
+    im.save(path, quality=84, optimize=True, progressive=True)
+
+
 def steam(appid):
     for url in (
         f"https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/{appid}/library_600x900_2x.jpg",
@@ -132,7 +138,7 @@ def main():
             report.append(f"| {g['id']} | kept existing |"); continue
         try:
             raw, src = steam(g["appid"])
-            save_square(raw, path, focus_y=0.3)
+            save_portrait(raw, path)
             report.append(f"| {g['id']} | {src} |")
         except Exception as e:
             report.append(f"| {g['id']} | FAILED: {e} |")
