@@ -414,3 +414,5 @@ footer .barcode { height: 22px; width: 160px; opacity: .5;
 /* turntable sits behind the covers */
 .base { z-index: 0; }
 .ring { z-index: 1; }
+/* description / artist under the stand: larger and higher contrast */
+.plate .now span { display: block; margin-top: 4px; font-size: 16px; color: color-mix(in srgb, var(--text) 82%, var(--bg)); }
