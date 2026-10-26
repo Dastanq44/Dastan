@@ -169,7 +169,7 @@ p { margin: 0; }
 .links-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
 .links-panel {
   position: absolute; right: 0; top: calc(100% + 10px);
-  display: grid; grid-template-columns: repeat(3, 48px); gap: 8px; padding: 10px;
+  display: grid; grid-template-columns: repeat(4, 48px); gap: 8px; padding: 10px;
   background: var(--panel); border: 1px solid var(--line); border-top: 2px solid var(--hi);
   box-shadow: 0 16px 40px rgba(0, 0, 0, .2);
   animation: drop .18s ease-out;
