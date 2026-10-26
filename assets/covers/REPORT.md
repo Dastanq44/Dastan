@@ -2,36 +2,36 @@
 
 | id | source |
 |---|---|
-| cyberpunk-2077 | https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/library_600x900_2x.jpg |
-| baldurs-gate-3 | https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/library_600x900_2x.jpg |
-| the-last-of-us-2 | https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2531310/library_600x900_2x.jpg |
-| titanfall-2 | https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/library_600x900_2x.jpg |
-| dying-light-2 | https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/534380/library_600x900_2x.jpg |
-| metro-exodus | https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412020/library_600x900_2x.jpg |
-| dead-cells | https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/library_600x900_2x.jpg |
-| total-war-warhammer-3 | https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/library_600x900_2x.jpg |
-| factorio | https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427520/library_600x900_2x.jpg |
-| slipknot-danger-keep-away | iTunes: Slipknot - Danger - Keep Away (Vol. 3 The Subliminal Verses) |
-| pearl-jam-rearviewmirror | iTunes: Pearl Jam - Rearviewmirror (Live) (Vault 9: Live in Seattle 12/8/93) |
+| cyberpunk-2077 | kept existing |
+| baldurs-gate-3 | kept existing |
+| the-last-of-us-2 | kept existing |
+| titanfall-2 | kept existing |
+| dying-light-2 | kept existing |
+| metro-exodus | kept existing |
+| dead-cells | kept existing |
+| total-war-warhammer-3 | kept existing |
+| factorio | kept existing |
+| slipknot-danger-keep-away | kept existing |
+| pearl-jam-rearviewmirror | iTunes: Pearl Jam - Rearviewmirror (Gibson Amphitheatre, Universal City, CA 10/01/2009) (Pearl Jam Twenty (Original Motion Picture Soundtrack)) |
 | deftones-street-carp | iTunes: Deftones - Street Carp (Festimad '03) |
-| 1000-eyes-mnhr | iTunes: 1000 Eyes - MNHR (Drop to an Ocean) (SIGNALIS: MEMORIES (Side A)) |
-| low-roar-friends-make-garbage | iTunes: Low Roar - Friends Make Garbage (Good Friends Take It Out) (Low Roar) |
-| the-long-faces-cadence | iTunes: The Long Faces - Cadence (Cadence - Single) |
-| lynyrd-skynyrd-am-i-losin | iTunes: Lynyrd Skynyrd - Am I Losin' (Lynyrd Skynyrd) |
+| 1000-eyes-mnhr | kept existing |
+| low-roar-friends-make-garbage | kept existing |
+| the-long-faces-cadence | kept existing |
+| lynyrd-skynyrd-am-i-losin | kept existing |
 | lxner-2047 | FAILED: no Deezer match |
-| soma-tanizaki-caligo | iTunes: Soma Tanizaki - Caligo, Miasma of Night (Elden Ring Nightreign (Original Soundtrack)) |
-| el-huervo-rust | iTunes: El Huervo - Rust (Triobelisk Remix) (Rust) |
-| tsuneo-imahori-out-of-bounds | iTunes: Tsuneo Imahori - Out of Bounds (Cyberpunk: Edgerunners 2 (Original Series Score)) |
+| soma-tanizaki-caligo | kept existing |
+| el-huervo-rust | iTunes: El Huervo - Rust (Rust) |
+| tsuneo-imahori-out-of-bounds | kept existing |
 | mbv-sometimes | iTunes: my bloody valentine - Sometimes (Lost In Translation (Original Motion Picture Soundtrack)) |
-| slipknot-the-nameless | iTunes: Slipknot - The Nameless (Vol. 3: (The Subliminal Verses) [Deluxe Edition]) |
-| slipknot-my-plague | Deezer: Slipknot - My Plague (Iowa (10th Anniversary Edition)) |
-| temnyi-prints-frantsuzy | Deezer: тёмный принц - французы (мрачные треды) |
+| slipknot-the-nameless | kept existing |
+| slipknot-my-plague | kept existing |
+| temnyi-prints-frantsuzy | kept existing |
 | polaroid-skinimarink | FAILED: no Deezer match |
-| mofd-aoi-koi | iTunes: MASS OF THE FERMENTING DREGS - Aoi, Koi, Daidaiiro No Hi (World Is Yours - EP) |
-| the-neighbourhood-zombie | iTunes: The Neighbourhood - Zombie ((((((ultraSOUND)))))) |
-| atlus-blooming-villain | FAILED: no Deezer match |
-| crooked-still-ecstasy | iTunes: Crooked Still - Ecstasy (Instrumental Edit) (Shaken By A Low Sound (Deluxe)) |
-| arctic-monkeys-mardy-bum | iTunes: Arctic Monkeys - Mardy Bum (Whatever People Say I Am, That's What I'm Not) |
-| rhcp-otherside | iTunes: Red Hot Chili Peppers - Otherside (Californication (Deluxe Edition)) |
-| gnr-civil-war | iTunes: Guns N' Roses - Civil War (Greatest Hits) |
-| future-wait-for-u | iTunes: Future - WAIT FOR U (feat. Drake & Tems) (I NEVER LIKED YOU) |
+| mofd-aoi-koi | kept existing |
+| the-neighbourhood-zombie | kept existing |
+| atlus-blooming-villain | iTunes: ATLUS Sound Team - Blooming Villain (Persona 5 (Original Soundtrack)) |
+| crooked-still-ecstasy | iTunes: Crooked Still - Ecstasy (Shaken By A Low Sound (Deluxe)) |
+| arctic-monkeys-mardy-bum | kept existing |
+| rhcp-otherside | kept existing |
+| gnr-civil-war | iTunes: Guns N' Roses - Civil War (Use Your Illusion II) |
+| future-wait-for-u | kept existing |
