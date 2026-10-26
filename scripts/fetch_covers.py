@@ -92,6 +92,18 @@ def itunes_album(artist, title, album=None):
     raise RuntimeError("no iTunes album match")
 
 
+def deezer_album(artist, title, album=None):
+    if not album:
+        raise RuntimeError("no album given")
+    q = urllib.parse.urlencode({"q": f'artist:"{artist}" album:"{album}"'})
+    a, al = norm(artist), norm(album)
+    for r in get(f"https://api.deezer.com/search/album?{q}", True).get("data", []):
+        ra, rc = norm(r["artist"]["name"]), norm(r["title"])
+        if (a in ra or ra in a) and rc.startswith(al):
+            return get(r["cover_xl"]), f"Deezer album: {r['artist']['name']} - {r['title']}"
+    raise RuntimeError("no Deezer album match")
+
+
 def deezer(artist, title, album=None):
     q = urllib.parse.urlencode({"q": f'artist:"{artist}" track:"{title}"'})
     res = get(f"https://api.deezer.com/search?{q}", True).get("data", [])
@@ -129,7 +141,7 @@ def main():
         path = OUT / f"{m['id']}.jpg"
         if path.exists() and not force:
             report.append(f"| {m['id']} | kept existing |"); continue
-        tries = [(fn, a, t) for a, t in [(m["artist"], m["title"])] + m.get("alts", []) for fn in (itunes_album, itunes, deezer)]
+        tries = [(fn, a, t) for a, t in [(m["artist"], m["title"])] + m.get("alts", []) for fn in (itunes_album, deezer_album, itunes, deezer)]
         for fn, a, t in tries:
             try:
                 raw, src = fn(a, t, m.get("album"))
