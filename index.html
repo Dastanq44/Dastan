@@ -3,25 +3,24 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dastan // Home</title>
-  <meta name="description" content="Dastan, 19, Computer Science at the University of Bristol.">
+  <title>Dastan</title>
+  <meta name="description" content="Dastan, 19. Computer Science at the University of Bristol. Music and links.">
+  <script>try { if (localStorage.getItem("theme") === "dark") document.documentElement.dataset.theme = "dark"; } catch {}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-<body class="sec-hub">
+<body>
 <a class="skip" href="#main">Skip to content</a>
 
 <div class="frame">
   <header class="topbar">
     <div class="wrap">
-      <a class="logo" href="index.html"><b>D</b><span>DASTAN</span></a>
-      <nav class="mainnav" aria-label="Main">
-        <a href="index.html" aria-current="page">Home<small>// hub</small></a>
-        <a class="to-dev" href="dev.html">Code<small>// netrunner</small></a>
-        <a class="to-personal" href="personal.html">Personal<small>// off-duty</small></a>
-      </nav>
+      <a class="logo" href="#top"><b>D</b><span>DASTAN</span></a>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle dark theme">
+        <span class="sw" aria-hidden="true"><i></i></span><span class="lbl">Dark</span>
+      </button>
       <div class="links-dd">
         <button class="links-toggle" aria-expanded="false" aria-controls="links-panel">Links <span class="chev" aria-hidden="true">▾</span></button>
         <div class="links-panel" id="links-panel" hidden>
@@ -35,12 +34,12 @@
   </header>
 
   <main id="main">
-    <section class="profile wrap" aria-label="About me">
+    <section class="profile wrap" id="top" aria-label="About me">
       <figure class="photo">
         <img src="assets/img/dastan.jpg" alt="Dastan in an orange leather jacket by a lake" width="720" height="900">
       </figure>
       <div class="info">
-        <h1 class="glitch" data-text="Dastan">Dastan</h1>
+        <h1><span class="glitch" data-text="Dastan">Dastan</span></h1>
         <dl>
           <div><dt>Age</dt><dd>19</dd></div>
           <div><dt>Born</dt><dd>Zhezkazgan, KZ</dd></div>
@@ -50,19 +49,36 @@
       </div>
     </section>
 
-    <section class="wrap" aria-label="Choose a section">
-      <div class="doors">
-        <a class="door dev" href="dev.html">
-          <span class="label">01 // CODE</span>
-          <h2>Netrunner <span class="arrow">→</span></h2>
-          <p class="who">Projects, GitHub, stack.</p>
-        </a>
-        <a class="door personal" href="personal.html">
-          <span class="label">02 // PERSONAL</span>
-          <h2>Off-duty <span class="arrow">→</span></h2>
-          <p class="who">Music, games, films.</p>
-        </a>
-      </div>
+    <section class="music wrap" id="music" aria-labelledby="music-h">
+      <div class="sec-head"><span class="num">01</span><h2 id="music-h">Music</h2></div>
+      <ol class="players">
+        <li class="player" data-src="assets/music/lost-waters.mp3">
+          <button class="play" type="button" aria-label="Play Lost Waters"></button>
+          <div class="meta">
+            <h3>Lost Waters</h3>
+            <p>Heavily inspired by <em>Parking Lot</em> by Mineral</p>
+          </div>
+          <div class="bar"><input type="range" min="0" max="1000" value="0" step="1" aria-label="Seek Lost Waters"><span class="time"><span class="cur">0:00</span> / 1:48</span></div>
+          <small class="note">* synthesised, can't record it live yet</small>
+        </li>
+        <li class="player" data-src="assets/music/the-day-bart-died.mp3">
+          <button class="play" type="button" aria-label="Play The day Bart died"></button>
+          <div class="meta">
+            <h3>The day Bart died</h3>
+            <p>Inspired by The Long Faces</p>
+          </div>
+          <div class="bar"><input type="range" min="0" max="1000" value="0" step="1" aria-label="Seek The day Bart died"><span class="time"><span class="cur">0:00</span> / 1:29</span></div>
+          <small class="note">* synthesised, can't record it live yet</small>
+        </li>
+        <li class="player" data-src="assets/music/years-of-silence.mp3">
+          <button class="play" type="button" aria-label="Play Years of Silence (512)"></button>
+          <div class="meta">
+            <h3>Years of Silence <span class="sub">(512)</span></h3>
+            <p>A tribute of sorts to <em>Signalis</em></p>
+          </div>
+          <div class="bar"><input type="range" min="0" max="1000" value="0" step="1" aria-label="Seek Years of Silence"><span class="time"><span class="cur">0:00</span> / 1:44</span></div>
+        </li>
+      </ol>
     </section>
   </main>
 

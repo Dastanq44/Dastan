@@ -3,17 +3,14 @@
 Plain HTML/CSS/JS, no build step. Open `index.html` in a browser to preview.
 
 ## Structure
-- `index.html` hub: name, intro, and two "doors" (Code / Personal) so each visitor picks their path in one click.
-- `dev.html` Code section (cyan): About, Stack, Projects (filterable), GitHub, Contact.
-- `personal.html` Personal section (red): Music player, Games/Films/Albums shelf, Links.
-- `css/style.css` all styles. Colors and sizes are variables at the top.
-- `js/main.js` small extras (boot screen, filters, tabs, audio). Site works without it.
+One page (`index.html`): photo + info, then a Music section with three players.
+- Header: **Links** drop-down (Spotify, GitHub, Instagram, LinkedIn logos) and a light/dark switch. Light is the default; the choice is remembered.
+- `css/style.css` all styles. Theme colors are variables at the top (`:root` = light, `[data-theme="dark"]` = dark).
+- `js/main.js` theme switch, links drop-down, audio players.
+- `assets/img/dastan.jpg` photo, `assets/music/*.mp3` tracks.
 
-The top nav on every page always shows Home / Code / Personal, and each section page ends with a link to the other one.
-The whole site sits in a centered "box" on desktop; the sides show only the background. On phones the box goes full width.
-
-## Adding music
-Put files in `assets/music/` and set `data-src="assets/music/track.mp3"` on each `<li class="track">` in `personal.html`.
+## Adding a track
+Copy a `<li class="player">` block in `index.html`, change `data-src`, the title, the note and the duration.
 
 ## Hosting (all free for a static site)
 | Host | Good at | Watch out for |
