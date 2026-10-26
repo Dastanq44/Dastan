@@ -12,8 +12,8 @@
 | total-war-warhammer-3 | kept existing |
 | factorio | kept existing |
 | slipknot-danger-keep-away | kept existing |
-| pearl-jam-rearviewmirror | iTunes: Pearl Jam - Rearviewmirror (Gibson Amphitheatre, Universal City, CA 10/01/2009) (Pearl Jam Twenty (Original Motion Picture Soundtrack)) |
-| deftones-street-carp | iTunes album: Deftones - Saturday Night Wrist |
+| pearl-jam-rearviewmirror | Deezer album: Pearl Jam - Vs. |
+| deftones-street-carp | kept existing |
 | 1000-eyes-mnhr | kept existing |
 | low-roar-friends-make-garbage | kept existing |
 | the-long-faces-cadence | kept existing |
