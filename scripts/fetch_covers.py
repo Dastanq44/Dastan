@@ -145,6 +145,8 @@ def main():
 
     for m in cfg["music"]:
         path = OUT / f"{m['id']}.jpg"
+        if m.get("skip"):
+            report.append(f"| {m['id']} | skipped (no cover wanted) |"); continue
         if path.exists() and not force:
             report.append(f"| {m['id']} | kept existing |"); continue
         tries = [(fn, a, t) for a, t in [(m["artist"], m["title"])] + m.get("alts", []) for fn in (itunes_album, deezer_album, itunes, deezer)]

@@ -114,7 +114,8 @@
       "id": "mbv-sometimes",
       "artist": "my bloody valentine",
       "title": "Sometimes",
-      "album": "Loveless"
+      "album": "Loveless",
+      "skip": true
     },
     {
       "id": "slipknot-the-nameless",
