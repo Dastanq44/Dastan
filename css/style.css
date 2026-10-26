@@ -404,3 +404,10 @@ footer .barcode { height: 22px; width: 160px; opacity: .5;
 .games .item .cover { aspect-ratio: 2 / 3; }
 .games .stand { height: calc(var(--card) * 1.5 + 150px); }
 @media (max-width: 640px) { .games .stand-box { --card: 92px; --r: 175px; } }
+
+/* names under each cover are hidden; the plate below shows the front one */
+.item .name { display: none; }
+.stand { height: calc(var(--card) + 74px); }
+.games .stand { height: calc(var(--card) * 1.5 + 74px); }
+.base { height: 44px; bottom: 0; }
+.plate { margin-top: 2px; }
