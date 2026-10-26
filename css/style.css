@@ -423,3 +423,15 @@ footer .barcode { height: 22px; width: 160px; opacity: .5;
 .plate .now { width: 420px; }
 .plate .now span { font-size: 20px; }
 @media (max-width: 640px) { .plate .now span { font-size: 17px; } }
+
+/* ---------- link strip (between info and music) ---------- */
+.link-strip { border-block: 1px solid var(--line); background: var(--bg-2); margin-bottom: 48px; }
+.link-strip .wrap { display: flex; justify-content: center; }
+.link-strip a {
+  display: grid; place-items: center; width: 64px; height: 56px; color: var(--text);
+  border-right: 1px solid var(--line); transition: color .15s, background-color .15s;
+}
+.link-strip a:first-child { border-left: 1px solid var(--line); }
+.link-strip a:hover { color: var(--brand); background: var(--panel); text-decoration: none; }
+.link-strip svg { width: 24px; height: 24px; fill: currentColor; }
+@media (max-width: 420px) { .link-strip a { width: 52px; } }
