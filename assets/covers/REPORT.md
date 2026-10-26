@@ -13,14 +13,14 @@
 | factorio | kept existing |
 | slipknot-danger-keep-away | kept existing |
 | pearl-jam-rearviewmirror | iTunes: Pearl Jam - Rearviewmirror (Gibson Amphitheatre, Universal City, CA 10/01/2009) (Pearl Jam Twenty (Original Motion Picture Soundtrack)) |
-| deftones-street-carp | iTunes: Deftones - Street Carp (Festimad '03) |
+| deftones-street-carp | iTunes album: Deftones - Saturday Night Wrist |
 | 1000-eyes-mnhr | kept existing |
 | low-roar-friends-make-garbage | kept existing |
 | the-long-faces-cadence | kept existing |
 | lynyrd-skynyrd-am-i-losin | kept existing |
 | lxner-2047 | FAILED: no Deezer match |
 | soma-tanizaki-caligo | kept existing |
-| el-huervo-rust | iTunes: El Huervo - Rust (Rust) |
+| el-huervo-rust | kept existing |
 | tsuneo-imahori-out-of-bounds | kept existing |
 | mbv-sometimes | iTunes: my bloody valentine - Sometimes (Lost In Translation (Original Motion Picture Soundtrack)) |
 | slipknot-the-nameless | kept existing |
@@ -29,9 +29,9 @@
 | polaroid-skinimarink | FAILED: no Deezer match |
 | mofd-aoi-koi | kept existing |
 | the-neighbourhood-zombie | kept existing |
-| atlus-blooming-villain | iTunes: ATLUS Sound Team - Blooming Villain (Persona 5 (Original Soundtrack)) |
-| crooked-still-ecstasy | iTunes: Crooked Still - Ecstasy (Shaken By A Low Sound (Deluxe)) |
+| atlus-blooming-villain | kept existing |
+| crooked-still-ecstasy | kept existing |
 | arctic-monkeys-mardy-bum | kept existing |
 | rhcp-otherside | kept existing |
-| gnr-civil-war | iTunes: Guns N' Roses - Civil War (Use Your Illusion II) |
+| gnr-civil-war | kept existing |
 | future-wait-for-u | kept existing |
