@@ -78,6 +78,20 @@ def itunes(artist, title, album=None):
     return get(url), f"iTunes: {r['artistName']} - {r['trackName']} ({r.get('collectionName', '')})"
 
 
+def itunes_album(artist, title, album=None):
+    """Album lookup, used when an entry names its album (track search misses some)."""
+    if not album:
+        raise RuntimeError("no album given")
+    q = urllib.parse.urlencode({"term": f"{artist} {album}", "entity": "album", "limit": 25})
+    a, al = norm(artist), norm(album)
+    for r in get(f"https://itunes.apple.com/search?{q}", True)["results"]:
+        ra, rc = norm(r.get("artistName", "")), norm(r.get("collectionName", ""))
+        if (a in ra or ra in a) and rc.startswith(al):
+            url = r["artworkUrl100"].replace("100x100bb", "1000x1000bb")
+            return get(url), f"iTunes album: {r['artistName']} - {r['collectionName']}"
+    raise RuntimeError("no iTunes album match")
+
+
 def deezer(artist, title, album=None):
     q = urllib.parse.urlencode({"q": f'artist:"{artist}" track:"{title}"'})
     res = get(f"https://api.deezer.com/search?{q}", True).get("data", [])
@@ -115,7 +129,7 @@ def main():
         path = OUT / f"{m['id']}.jpg"
         if path.exists() and not force:
             report.append(f"| {m['id']} | kept existing |"); continue
-        tries = [(fn, a, t) for a, t in [(m["artist"], m["title"])] + m.get("alts", []) for fn in (itunes, deezer)]
+        tries = [(fn, a, t) for a, t in [(m["artist"], m["title"])] + m.get("alts", []) for fn in (itunes_album, itunes, deezer)]
         for fn, a, t in tries:
             try:
                 raw, src = fn(a, t, m.get("album"))
