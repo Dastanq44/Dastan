@@ -453,3 +453,9 @@ footer .barcode { height: 22px; width: 160px; opacity: .5;
 @media (max-width: 640px) {
   .player { grid-template-columns: 40px 1fr; grid-template-areas: "btn meta" "btn bar" ". note"; row-gap: 4px; }
 }
+/* roomier link strip, no dividers */
+.link-strip .wrap { gap: clamp(14px, 4vw, 40px); padding-block: 10px; }
+.link-strip a, .link-strip a:first-child { border: 0; width: 56px; height: 56px; }
+.link-strip a:hover { background: none; }
+.link-strip svg { width: 30px; height: 30px; }
+@media (max-width: 420px) { .link-strip .wrap { gap: 6px; } .link-strip a, .link-strip a:first-child { width: 44px; } .link-strip svg { width: 24px; height: 24px; } }
