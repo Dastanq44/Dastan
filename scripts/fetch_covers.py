@@ -48,16 +48,29 @@ def steam(appid):
     raise RuntimeError("no Steam cover found")
 
 
-def itunes(artist, title):
-    q = urllib.parse.urlencode({"term": f"{artist} {title}", "entity": "song", "limit": 15})
-    res = get(f"https://itunes.apple.com/search?{q}", True)["results"]
+BAD_WORDS = ("live", "remix", "instrumental", "demo", "acoustic", "karaoke", "slowed", "sped")
+
+
+def score(artist, title, album, ra, rt, rc):
     a, t = norm(artist), norm(title)
+    ra, rtn, rc_n = norm(ra), norm(rt), norm(rc)
+    if not (a in ra or ra in a) or not (t in rtn or rtn in t):
+        return 0
+    s = 3 + (rtn == t) * 2
+    if album and norm(album) in rc_n:
+        s += 4
+    s -= sum(w in (rt + " " + rc).lower() for w in BAD_WORDS if w not in title.lower())
+    return s
+
+
+def itunes(artist, title, album=None):
+    q = urllib.parse.urlencode({"term": f"{artist} {title}", "entity": "song", "limit": 50})
+    res = get(f"https://itunes.apple.com/search?{q}", True)["results"]
     best = None
     for r in res:
-        ra, rt = norm(r.get("artistName", "")), norm(r.get("trackName", ""))
-        score = (a in ra or ra in a) * 2 + (t in rt or rt in t)
-        if score >= 2 and (best is None or score > best[0]):
-            best = (score, r)
+        sc = score(artist, title, album, r.get("artistName", ""), r.get("trackName", ""), r.get("collectionName", ""))
+        if sc and (best is None or sc > best[0]):
+            best = (sc, r)
     if not best:
         raise RuntimeError("no iTunes match")
     r = best[1]
@@ -65,16 +78,20 @@ def itunes(artist, title):
     return get(url), f"iTunes: {r['artistName']} - {r['trackName']} ({r.get('collectionName', '')})"
 
 
-def deezer(artist, title):
+def deezer(artist, title, album=None):
     q = urllib.parse.urlencode({"q": f'artist:"{artist}" track:"{title}"'})
     res = get(f"https://api.deezer.com/search?{q}", True).get("data", [])
     if not res:
         res = get("https://api.deezer.com/search?" + urllib.parse.urlencode({"q": f"{artist} {title}"}), True).get("data", [])
-    a = norm(artist)
+    best = None
     for r in res:
-        if a in norm(r["artist"]["name"]) or norm(r["artist"]["name"]) in a:
-            return get(r["album"]["cover_xl"]), f"Deezer: {r['artist']['name']} - {r['title']} ({r['album']['title']})"
-    raise RuntimeError("no Deezer match")
+        sc = score(artist, title, album, r["artist"]["name"], r["title"], r["album"]["title"])
+        if sc and (best is None or sc > best[0]):
+            best = (sc, r)
+    if not best:
+        raise RuntimeError("no Deezer match")
+    r = best[1]
+    return get(r["album"]["cover_xl"]), f"Deezer: {r['artist']['name']} - {r['title']} ({r['album']['title']})"
 
 
 def main():
@@ -98,9 +115,10 @@ def main():
         path = OUT / f"{m['id']}.jpg"
         if path.exists() and not force:
             report.append(f"| {m['id']} | kept existing |"); continue
-        for fn in (itunes, deezer):
+        tries = [(fn, a, t) for a, t in [(m["artist"], m["title"])] + m.get("alts", []) for fn in (itunes, deezer)]
+        for fn, a, t in tries:
             try:
-                raw, src = fn(m["artist"], m["title"])
+                raw, src = fn(a, t, m.get("album"))
                 save_square(raw, path)
                 report.append(f"| {m['id']} | {src} |")
                 break
