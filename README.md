@@ -3,8 +3,8 @@
 Plain HTML/CSS/JS, no build step. Open `index.html` in a browser to preview.
 
 ## Structure
-One page (`index.html`): photo + info, then a Music section with three players.
-- Header: **Links** drop-down (Spotify, GitHub, Instagram, LinkedIn logos) and a light/dark switch. Light is the default; the choice is remembered.
+One scrolling page (`index.html`): photo + info, Music (three players), Favorite games (rotating stand, covers load from the Steam CDN).
+- Header: **Links** drop-down (Spotify, GitHub, Instagram, LinkedIn, Steam, Discord logos) and a light/dark switch. Light is the default; the choice is remembered.
 - `css/style.css` all styles. Theme colors are variables at the top (`:root` = light, `[data-theme="dark"]` = dark).
 - `js/main.js` theme switch, links drop-down, audio players.
 - `assets/img/dastan.jpg` photo, `assets/music/*.mp3` tracks.

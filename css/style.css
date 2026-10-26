@@ -165,7 +165,7 @@ p { margin: 0; }
 .links-toggle[aria-expanded="true"] .chev { transform: rotate(180deg); }
 .links-panel {
   position: absolute; right: 0; top: calc(100% + 10px);
-  display: grid; grid-template-columns: repeat(2, 48px); gap: 8px; padding: 10px;
+  display: grid; grid-template-columns: repeat(3, 48px); gap: 8px; padding: 10px;
   background: var(--panel); border: 1px solid var(--line); border-top: 2px solid var(--yellow);
   box-shadow: 0 16px 40px rgba(0, 0, 0, .2);
   animation: drop .18s ease-out;
@@ -288,3 +288,78 @@ footer { margin-top: 70px; border-top: 1px solid var(--line); padding: 24px 0 36
 footer .wrap { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
 footer .barcode { height: 22px; width: 160px; opacity: .5;
   background: repeating-linear-gradient(90deg, var(--muted) 0 2px, transparent 2px 4px, var(--muted) 4px 5px, transparent 5px 9px, var(--muted) 9px 12px, transparent 12px 13px); }
+
+/* ---------- favorite games: rotating stand ---------- */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.games { padding-top: 56px; scroll-margin-top: 80px; }
+.stand-box {
+  --card: 160px; --r: 380px;
+  position: relative; overflow: hidden;
+  background:
+    radial-gradient(60% 50% at 50% 85%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 70%),
+    var(--panel);
+  border: 1px solid var(--line);
+  clip-path: polygon(0 0, calc(100% - 22px) 0, 100% 22px, 100% 100%, 22px 100%, 0 calc(100% - 22px));
+  padding: 34px 0 18px;
+}
+.stand { position: relative; height: calc(var(--card) + 150px); perspective: 1500px; perspective-origin: 50% -40%; }
+.ring {
+  list-style: none; margin: 0; padding: 0;
+  position: absolute; left: 50%; top: 40px; width: var(--card); margin-left: calc(var(--card) / -2);
+  transform-style: preserve-3d;
+  transform: translateZ(calc(var(--r) * -1)) rotateY(var(--rot, 0deg));
+}
+.game {
+  position: absolute; top: 0; left: 0; width: var(--card);
+  /* place on the ring, then turn back to face the viewer */
+  transform: rotateY(calc(var(--i) * 40deg)) translateZ(var(--r)) rotateY(calc(var(--i) * -40deg - var(--rot, 0deg)));
+  filter: brightness(calc(.55 + var(--d, 1) * .35)) saturate(calc(.3 + var(--d, 1) * .5));
+}
+.game.is-front { opacity: 1; filter: none; }
+.game:not(.is-front) .name { opacity: calc(var(--d, 1) * 1.6 - .8); }
+.game a { display: block; color: var(--text); }
+.game a:hover { text-decoration: none; }
+.game .cover {
+  position: relative; display: block; aspect-ratio: 1; overflow: hidden;
+  background: var(--bg-2); border: 1px solid var(--line);
+  clip-path: polygon(0 0, calc(100% - 14px) 0, 100% 14px, 100% 100%, 0 100%);
+}
+.game.is-front .cover { border-color: var(--accent); box-shadow: 0 14px 30px rgba(0,0,0,.25); }
+.game img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 22%; z-index: 1; }
+.game img.is-broken { display: none; }
+.game .ph {           /* shown only if the cover can't load */
+  position: absolute; inset: 0; display: grid; place-items: center; padding: 14px; text-align: center;
+  font: 700 18px/1.1 var(--f-display); text-transform: uppercase; color: var(--muted);
+  background: repeating-linear-gradient(-45deg, transparent 0 10px, color-mix(in srgb, var(--line) 50%, transparent) 10px 20px);
+}
+.game .rank {
+  position: absolute; top: 6px; left: 6px; z-index: 2;
+  background: var(--yellow); color: #000; font: 700 12px var(--f-display); padding: 2px 6px;
+}
+.game .name {
+  display: block; margin-top: 8px; text-align: center; font: 600 13px/1.2 var(--f-display);
+  letter-spacing: .04em; text-transform: uppercase;
+}
+/* the turntable the covers stand on */
+.base {
+  position: absolute; left: 50%; bottom: 6px; width: min(80%, 700px); height: 56px; transform: translateX(-50%);
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  background: radial-gradient(closest-side, color-mix(in srgb, var(--text) 8%, transparent), transparent);
+}
+.base::after { content: ""; position: absolute; inset: 12px 18%; border-radius: 50%; border: 1px dashed color-mix(in srgb, var(--accent) 45%, transparent); }
+
+.plate { display: flex; align-items: center; justify-content: center; gap: 18px; margin-top: 8px; padding: 0 16px; }
+.plate .now { text-align: center; min-width: 0; width: 280px; }
+.plate .now b { display: block; font: 700 20px/1.2 var(--f-display); text-transform: uppercase; }
+.plate .now span { font-size: 13px; color: var(--muted); }
+.plate .nav {
+  width: 38px; height: 38px; cursor: pointer; font-size: 16px;
+  background: transparent; color: var(--text); border: 1px solid var(--line);
+}
+.plate .nav:hover { border-color: var(--accent); color: var(--accent); }
+
+@media (max-width: 640px) {
+  .stand-box { --card: 96px; --r: 175px; }
+  .game .name { font-size: 11px; }
+}
