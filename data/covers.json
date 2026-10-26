@@ -1,0 +1,39 @@
+{
+  "games": [
+    {"id": "cyberpunk-2077", "appid": 1091500},
+    {"id": "baldurs-gate-3", "appid": 1086940},
+    {"id": "the-last-of-us-2", "appid": 2531310},
+    {"id": "titanfall-2", "appid": 1237970},
+    {"id": "dying-light-2", "appid": 534380},
+    {"id": "metro-exodus", "appid": 412020},
+    {"id": "dead-cells", "appid": 588650},
+    {"id": "total-war-warhammer-3", "appid": 1142710},
+    {"id": "factorio", "appid": 427520}
+  ],
+  "music": [
+    {"id": "slipknot-danger-keep-away", "artist": "Slipknot", "title": "Danger - Keep Away"},
+    {"id": "pearl-jam-rearviewmirror", "artist": "Pearl Jam", "title": "Rearviewmirror"},
+    {"id": "deftones-street-carp", "artist": "Deftones", "title": "Street Carp"},
+    {"id": "1000-eyes-mnhr", "artist": "1000 Eyes", "title": "MNHR"},
+    {"id": "low-roar-friends-make-garbage", "artist": "Low Roar", "title": "Friends Make Garbage"},
+    {"id": "the-long-faces-cadence", "artist": "The Long Faces", "title": "Cadence"},
+    {"id": "lynyrd-skynyrd-am-i-losin", "artist": "Lynyrd Skynyrd", "title": "Am I Losin'"},
+    {"id": "lxner-2047", "artist": "LXNER", "title": "2047"},
+    {"id": "soma-tanizaki-caligo", "artist": "Soma Tanizaki", "title": "Caligo, Miasma of Night"},
+    {"id": "el-huervo-rust", "artist": "El Huervo", "title": "Rust"},
+    {"id": "tsuneo-imahori-out-of-bounds", "artist": "Tsuneo Imahori", "title": "Out of Bounds"},
+    {"id": "mbv-sometimes", "artist": "my bloody valentine", "title": "Sometimes"},
+    {"id": "slipknot-the-nameless", "artist": "Slipknot", "title": "The Nameless"},
+    {"id": "slipknot-my-plague", "artist": "Slipknot", "title": "My Plague"},
+    {"id": "temnyi-prints-frantsuzy", "artist": "темный принц", "title": "французы"},
+    {"id": "polaroid-skinimarink", "artist": "Полароид", "title": "скинимаринк"},
+    {"id": "mofd-aoi-koi", "artist": "MASS OF THE FERMENTING DREGS", "title": "Aoi, Koi, Daidaiiro No Hi"},
+    {"id": "the-neighbourhood-zombie", "artist": "The Neighbourhood", "title": "Zombie"},
+    {"id": "atlus-blooming-villain", "artist": "ATLUS GAME MUSIC", "title": "Blooming Villain"},
+    {"id": "crooked-still-ecstasy", "artist": "Crooked Still", "title": "Ecstasy"},
+    {"id": "arctic-monkeys-mardy-bum", "artist": "Arctic Monkeys", "title": "Mardy Bum"},
+    {"id": "rhcp-otherside", "artist": "Red Hot Chili Peppers", "title": "Otherside"},
+    {"id": "gnr-civil-war", "artist": "Guns N' Roses", "title": "Civil War"},
+    {"id": "future-wait-for-u", "artist": "Future", "title": "WAIT FOR U"}
+  ]
+}
