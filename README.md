@@ -3,7 +3,10 @@
 Plain HTML/CSS/JS, no build step. Open `index.html` in a browser to preview.
 
 ## Structure
-One scrolling page (`index.html`): photo + info, Music (three players), Favorite games (rotating stand, covers load from the Steam CDN).
+One scrolling page (`index.html`): photo + info, Music (three players), Music I love and Favorite games (rotating stands). Volume control sits in the top bar.
+
+## Covers
+Covers live in `assets/covers/`. To add or change one, edit `data/covers.json` and push: the "Fetch covers" GitHub Action downloads missing covers (Steam for games, iTunes/Deezer for music) and commits them. `assets/covers/REPORT.md` shows what matched. Delete a cover file to have it fetched again.
 - Header: **Links** drop-down (Spotify, GitHub, Instagram, LinkedIn, Steam, Discord logos) and a light/dark switch. Light is the default; the choice is remembered.
 - `css/style.css` all styles. Theme colors are variables at the top (`:root` = light, `[data-theme="dark"]` = dark).
 - `js/main.js` theme switch, links drop-down, audio players.

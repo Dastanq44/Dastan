@@ -18,6 +18,14 @@
   <header class="topbar">
     <div class="wrap">
       <a class="logo" href="#top"><b>D</b><span>DASTAN</span></a>
+      <div class="volume" role="group" aria-label="Music volume">
+        <span class="v-lbl" aria-hidden="true">VOL</span>
+        <input type="range" min="0" max="100" value="80" step="1" aria-label="Volume">
+        <span class="v-val" aria-hidden="true">80</span>
+        <button class="v-mute" type="button" aria-label="Mute" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path class="spk" d="M3 9h4l5-4v14l-5-4H3z"/><path class="wave" d="M15.5 8.5a5 5 0 0 1 0 7M18 6a8.5 8.5 0 0 1 0 12"/><path class="x" d="M16 9l6 6M22 9l-6 6"/></svg>
+        </button>
+      </div>
       <button class="theme-toggle" type="button" aria-label="Switch to dark theme" title="Toggle dark theme">
         <span class="sw" aria-hidden="true"><i></i></span><span class="lbl">Dark</span>
       </button>
@@ -83,83 +91,104 @@
       </ol>
     </section>
 
-    <section class="games wrap" id="games" aria-labelledby="games-h">
-      <div class="sec-head"><span class="num">02</span><h2 id="games-h">Favorite games</h2></div>
-      <div class="stand-box">
+    <section class="taste wrap" id="taste" aria-labelledby="taste-h">
+      <div class="sec-head"><span class="num">02</span><h2 id="taste-h">Music I love</h2></div>
+      <div class="stand-box" style="--n:24">
         <div class="stand" aria-hidden="true">
           <ul class="ring">
-          <li class="game" style="--i:0" data-note="My most favorite">
-            <a href="https://store.steampowered.com/app/1091500/" target="_blank" rel="noopener" tabindex="-1">
-              <span class="cover"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/library_600x900.jpg" data-fallback="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/library_600x900.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="ph" aria-hidden="true">Cyberpunk 2077</span><span class="rank">#1</span></span>
-              <span class="name">Cyberpunk 2077</span>
-            </a>
-          </li>
-          <li class="game" style="--i:1" data-note="Second favorite">
-            <a href="https://store.steampowered.com/app/1086940/" target="_blank" rel="noopener" tabindex="-1">
-              <span class="cover"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/library_600x900.jpg" data-fallback="https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/library_600x900.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="ph" aria-hidden="true">Baldur's Gate 3</span><span class="rank">#2</span></span>
-              <span class="name">Baldur's Gate 3</span>
-            </a>
-          </li>
-          <li class="game" style="--i:2" data-note="Third favorite">
-            <a href="https://store.steampowered.com/app/2531310/" target="_blank" rel="noopener" tabindex="-1">
-              <span class="cover"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2531310/library_600x900.jpg" data-fallback="https://cdn.cloudflare.steamstatic.com/steam/apps/2531310/library_600x900.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="ph" aria-hidden="true">The Last of Us Part II</span><span class="rank">#3</span></span>
-              <span class="name">The Last of Us Part II</span>
-            </a>
-          </li>
-          <li class="game" style="--i:3" data-note="Favorite shooter">
-            <a href="https://store.steampowered.com/app/1237970/" target="_blank" rel="noopener" tabindex="-1">
-              <span class="cover"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/library_600x900.jpg" data-fallback="https://cdn.cloudflare.steamstatic.com/steam/apps/1237970/library_600x900.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="ph" aria-hidden="true">Titanfall 2</span></span>
-              <span class="name">Titanfall 2</span>
-            </a>
-          </li>
-          <li class="game" style="--i:4" data-note="My comfort game">
-            <a href="https://store.steampowered.com/app/534380/" target="_blank" rel="noopener" tabindex="-1">
-              <span class="cover"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/534380/library_600x900.jpg" data-fallback="https://cdn.cloudflare.steamstatic.com/steam/apps/534380/library_600x900.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="ph" aria-hidden="true">Dying Light 2</span></span>
-              <span class="name">Dying Light 2</span>
-            </a>
-          </li>
-          <li class="game" style="--i:5" data-note="Most relatable atmosphere">
-            <a href="https://store.steampowered.com/app/412020/" target="_blank" rel="noopener" tabindex="-1">
-              <span class="cover"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/412020/library_600x900.jpg" data-fallback="https://cdn.cloudflare.steamstatic.com/steam/apps/412020/library_600x900.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="ph" aria-hidden="true">Metro Exodus</span></span>
-              <span class="name">Metro Exodus</span>
-            </a>
-          </li>
-          <li class="game" style="--i:6" data-note="Favorite roguelike">
-            <a href="https://store.steampowered.com/app/588650/" target="_blank" rel="noopener" tabindex="-1">
-              <span class="cover"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/library_600x900.jpg" data-fallback="https://cdn.cloudflare.steamstatic.com/steam/apps/588650/library_600x900.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="ph" aria-hidden="true">Dead Cells</span></span>
-              <span class="name">Dead Cells</span>
-            </a>
-          </li>
-          <li class="game" style="--i:7" data-note="My addiction for 2026">
-            <a href="https://store.steampowered.com/app/1142710/" target="_blank" rel="noopener" tabindex="-1">
-              <span class="cover"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1142710/library_600x900.jpg" data-fallback="https://cdn.cloudflare.steamstatic.com/steam/apps/1142710/library_600x900.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="ph" aria-hidden="true">Total War: Warhammer III</span></span>
-              <span class="name">Total War: Warhammer III</span>
-            </a>
-          </li>
-          <li class="game" style="--i:8" data-note="Unfinished gestalt">
-            <a href="https://store.steampowered.com/app/427520/" target="_blank" rel="noopener" tabindex="-1">
-              <span class="cover"><img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427520/library_600x900.jpg" data-fallback="https://cdn.cloudflare.steamstatic.com/steam/apps/427520/library_600x900.jpg" alt="" loading="lazy" referrerpolicy="no-referrer"><span class="ph" aria-hidden="true">Factorio</span></span>
-              <span class="name">Factorio</span>
-            </a>
-          </li>
+          <li class="item" style="--i:0" data-note="Slipknot"><span class="card-in"><span class="cover"><img src="assets/covers/slipknot-danger-keep-away.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Danger - Keep Away</span></span><span class="name">Danger - Keep Away</span></span></li>
+          <li class="item" style="--i:1" data-note="Pearl Jam"><span class="card-in"><span class="cover"><img src="assets/covers/pearl-jam-rearviewmirror.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Rearviewmirror</span></span><span class="name">Rearviewmirror</span></span></li>
+          <li class="item" style="--i:2" data-note="Deftones"><span class="card-in"><span class="cover"><img src="assets/covers/deftones-street-carp.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Street Carp</span></span><span class="name">Street Carp</span></span></li>
+          <li class="item" style="--i:3" data-note="1000 Eyes"><span class="card-in"><span class="cover"><img src="assets/covers/1000-eyes-mnhr.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">MNHR</span></span><span class="name">MNHR</span></span></li>
+          <li class="item" style="--i:4" data-note="Low Roar"><span class="card-in"><span class="cover"><img src="assets/covers/low-roar-friends-make-garbage.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Friends Make Garbage</span></span><span class="name">Friends Make Garbage</span></span></li>
+          <li class="item" style="--i:5" data-note="The Long Faces"><span class="card-in"><span class="cover"><img src="assets/covers/the-long-faces-cadence.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Cadence</span></span><span class="name">Cadence</span></span></li>
+          <li class="item" style="--i:6" data-note="Lynyrd Skynyrd"><span class="card-in"><span class="cover"><img src="assets/covers/lynyrd-skynyrd-am-i-losin.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Am I Losin&#x27;</span></span><span class="name">Am I Losin&#x27;</span></span></li>
+          <li class="item" style="--i:7" data-note="LXNER, arsene guillot"><span class="card-in"><span class="cover"><img src="assets/covers/lxner-2047.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">2047</span></span><span class="name">2047</span></span></li>
+          <li class="item" style="--i:8" data-note="Soma Tanizaki"><span class="card-in"><span class="cover"><img src="assets/covers/soma-tanizaki-caligo.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Caligo, Miasma of Night</span></span><span class="name">Caligo, Miasma of Night</span></span></li>
+          <li class="item" style="--i:9" data-note="El Huervo"><span class="card-in"><span class="cover"><img src="assets/covers/el-huervo-rust.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Rust</span></span><span class="name">Rust</span></span></li>
+          <li class="item" style="--i:10" data-note="Tsuneo Imahori"><span class="card-in"><span class="cover"><img src="assets/covers/tsuneo-imahori-out-of-bounds.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Out of Bounds</span></span><span class="name">Out of Bounds</span></span></li>
+          <li class="item" style="--i:11" data-note="my bloody valentine"><span class="card-in"><span class="cover"><img src="assets/covers/mbv-sometimes.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Sometimes</span></span><span class="name">Sometimes</span></span></li>
+          <li class="item" style="--i:12" data-note="Slipknot"><span class="card-in"><span class="cover"><img src="assets/covers/slipknot-the-nameless.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">The Nameless</span></span><span class="name">The Nameless</span></span></li>
+          <li class="item" style="--i:13" data-note="Slipknot"><span class="card-in"><span class="cover"><img src="assets/covers/slipknot-my-plague.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">My Plague</span></span><span class="name">My Plague</span></span></li>
+          <li class="item" style="--i:14" data-note="темный принц"><span class="card-in"><span class="cover"><img src="assets/covers/temnyi-prints-frantsuzy.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">французы</span></span><span class="name">французы</span></span></li>
+          <li class="item" style="--i:15" data-note="Полароид"><span class="card-in"><span class="cover"><img src="assets/covers/polaroid-skinimarink.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">скинимаринк</span></span><span class="name">скинимаринк</span></span></li>
+          <li class="item" style="--i:16" data-note="MASS OF FERMENTING DREGS"><span class="card-in"><span class="cover"><img src="assets/covers/mofd-aoi-koi.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Aoi, Koi, Daidaiiro No Hi</span></span><span class="name">Aoi, Koi, Daidaiiro No Hi</span></span></li>
+          <li class="item" style="--i:17" data-note="The Neighbourhood"><span class="card-in"><span class="cover"><img src="assets/covers/the-neighbourhood-zombie.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Zombie</span></span><span class="name">Zombie</span></span></li>
+          <li class="item" style="--i:18" data-note="ATLUS GAME MUSIC"><span class="card-in"><span class="cover"><img src="assets/covers/atlus-blooming-villain.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Blooming Villain</span></span><span class="name">Blooming Villain</span></span></li>
+          <li class="item" style="--i:19" data-note="Crooked Still"><span class="card-in"><span class="cover"><img src="assets/covers/crooked-still-ecstasy.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Ecstasy</span></span><span class="name">Ecstasy</span></span></li>
+          <li class="item" style="--i:20" data-note="Arctic Monkeys"><span class="card-in"><span class="cover"><img src="assets/covers/arctic-monkeys-mardy-bum.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Mardy Bum</span></span><span class="name">Mardy Bum</span></span></li>
+          <li class="item" style="--i:21" data-note="Red Hot Chili Peppers"><span class="card-in"><span class="cover"><img src="assets/covers/rhcp-otherside.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Otherside</span></span><span class="name">Otherside</span></span></li>
+          <li class="item" style="--i:22" data-note="Guns N&#x27; Roses"><span class="card-in"><span class="cover"><img src="assets/covers/gnr-civil-war.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Civil War</span></span><span class="name">Civil War</span></span></li>
+          <li class="item" style="--i:23" data-note="Future, Drake, Tems"><span class="card-in"><span class="cover"><img src="assets/covers/future-wait-for-u.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">WAIT FOR U</span></span><span class="name">WAIT FOR U</span></span></li>
           </ul>
           <div class="base"></div>
         </div>
         <div class="plate" aria-live="polite">
-          <button class="nav prev" type="button" aria-label="Previous game">◂</button>
-          <div class="now"><b class="now-name">Cyberpunk 2077</b><span class="now-note">My most favorite</span></div>
-          <button class="nav next" type="button" aria-label="Next game">▸</button>
+          <button class="nav prev" type="button" aria-label="Previous">◂</button>
+          <div class="now"><b class="now-name"></b><span class="now-note"></span></div>
+          <button class="nav next" type="button" aria-label="Next">▸</button>
         </div>
         <ol class="sr-only">
-          <li>Cyberpunk 2077: My most favorite</li>
-          <li>Baldur's Gate 3: Second favorite</li>
-          <li>The Last of Us Part II: Third favorite</li>
-          <li>Titanfall 2: Favorite shooter</li>
-          <li>Dying Light 2: My comfort game</li>
-          <li>Metro Exodus: Most relatable atmosphere</li>
-          <li>Dead Cells: Favorite roguelike</li>
-          <li>Total War: Warhammer III: My addiction for 2026</li>
-          <li>Factorio: Unfinished gestalt</li>
+          <li>Danger - Keep Away — Slipknot</li>
+          <li>Rearviewmirror — Pearl Jam</li>
+          <li>Street Carp — Deftones</li>
+          <li>MNHR — 1000 Eyes</li>
+          <li>Friends Make Garbage — Low Roar</li>
+          <li>Cadence — The Long Faces</li>
+          <li>Am I Losin&#x27; — Lynyrd Skynyrd</li>
+          <li>2047 — LXNER, arsene guillot</li>
+          <li>Caligo, Miasma of Night — Soma Tanizaki</li>
+          <li>Rust — El Huervo</li>
+          <li>Out of Bounds — Tsuneo Imahori</li>
+          <li>Sometimes — my bloody valentine</li>
+          <li>The Nameless — Slipknot</li>
+          <li>My Plague — Slipknot</li>
+          <li>французы — темный принц</li>
+          <li>скинимаринк — Полароид</li>
+          <li>Aoi, Koi, Daidaiiro No Hi — MASS OF FERMENTING DREGS</li>
+          <li>Zombie — The Neighbourhood</li>
+          <li>Blooming Villain — ATLUS GAME MUSIC</li>
+          <li>Ecstasy — Crooked Still</li>
+          <li>Mardy Bum — Arctic Monkeys</li>
+          <li>Otherside — Red Hot Chili Peppers</li>
+          <li>Civil War — Guns N&#x27; Roses</li>
+          <li>WAIT FOR U — Future, Drake, Tems</li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="games wrap" id="games" aria-labelledby="games-h">
+      <div class="sec-head"><span class="num">03</span><h2 id="games-h">Favorite games</h2></div>
+      <div class="stand-box" style="--n:9">
+        <div class="stand" aria-hidden="true">
+          <ul class="ring">
+          <li class="item" style="--i:0" data-note="My most favorite"><a href="https://store.steampowered.com/app/1091500/" target="_blank" rel="noopener" tabindex="-1"><span class="cover"><img src="assets/covers/cyberpunk-2077.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Cyberpunk 2077</span><span class="rank">#1</span></span><span class="name">Cyberpunk 2077</span></a></li>
+          <li class="item" style="--i:1" data-note="Second favorite"><a href="https://store.steampowered.com/app/1086940/" target="_blank" rel="noopener" tabindex="-1"><span class="cover"><img src="assets/covers/baldurs-gate-3.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Baldur&#x27;s Gate 3</span><span class="rank">#2</span></span><span class="name">Baldur&#x27;s Gate 3</span></a></li>
+          <li class="item" style="--i:2" data-note="Third favorite"><a href="https://store.steampowered.com/app/2531310/" target="_blank" rel="noopener" tabindex="-1"><span class="cover"><img src="assets/covers/the-last-of-us-2.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">The Last of Us Part II</span><span class="rank">#3</span></span><span class="name">The Last of Us Part II</span></a></li>
+          <li class="item" style="--i:3" data-note="Favorite shooter"><a href="https://store.steampowered.com/app/1237970/" target="_blank" rel="noopener" tabindex="-1"><span class="cover"><img src="assets/covers/titanfall-2.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Titanfall 2</span></span><span class="name">Titanfall 2</span></a></li>
+          <li class="item" style="--i:4" data-note="My comfort game"><a href="https://store.steampowered.com/app/534380/" target="_blank" rel="noopener" tabindex="-1"><span class="cover"><img src="assets/covers/dying-light-2.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Dying Light 2</span></span><span class="name">Dying Light 2</span></a></li>
+          <li class="item" style="--i:5" data-note="Most relatable atmosphere"><a href="https://store.steampowered.com/app/412020/" target="_blank" rel="noopener" tabindex="-1"><span class="cover"><img src="assets/covers/metro-exodus.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Metro Exodus</span></span><span class="name">Metro Exodus</span></a></li>
+          <li class="item" style="--i:6" data-note="Favorite roguelike"><a href="https://store.steampowered.com/app/588650/" target="_blank" rel="noopener" tabindex="-1"><span class="cover"><img src="assets/covers/dead-cells.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Dead Cells</span></span><span class="name">Dead Cells</span></a></li>
+          <li class="item" style="--i:7" data-note="My addiction for 2026"><a href="https://store.steampowered.com/app/1142710/" target="_blank" rel="noopener" tabindex="-1"><span class="cover"><img src="assets/covers/total-war-warhammer-3.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Total War: Warhammer III</span></span><span class="name">Total War: Warhammer III</span></a></li>
+          <li class="item" style="--i:8" data-note="Unfinished gestalt"><a href="https://store.steampowered.com/app/427520/" target="_blank" rel="noopener" tabindex="-1"><span class="cover"><img src="assets/covers/factorio.jpg" alt="" loading="lazy"><span class="ph" aria-hidden="true">Factorio</span></span><span class="name">Factorio</span></a></li>
+          </ul>
+          <div class="base"></div>
+        </div>
+        <div class="plate" aria-live="polite">
+          <button class="nav prev" type="button" aria-label="Previous">◂</button>
+          <div class="now"><b class="now-name"></b><span class="now-note"></span></div>
+          <button class="nav next" type="button" aria-label="Next">▸</button>
+        </div>
+        <ol class="sr-only">
+          <li>Cyberpunk 2077 — My most favorite</li>
+          <li>Baldur&#x27;s Gate 3 — Second favorite</li>
+          <li>The Last of Us Part II — Third favorite</li>
+          <li>Titanfall 2 — Favorite shooter</li>
+          <li>Dying Light 2 — My comfort game</li>
+          <li>Metro Exodus — Most relatable atmosphere</li>
+          <li>Dead Cells — Favorite roguelike</li>
+          <li>Total War: Warhammer III — My addiction for 2026</li>
+          <li>Factorio — Unfinished gestalt</li>
         </ol>
       </div>
     </section>
